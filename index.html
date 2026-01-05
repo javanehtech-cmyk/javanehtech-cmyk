@@ -1,22 +1,197 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سیاست حفظ حریم خصوصی - اپلیکیشن خدمات دیجیتال جوانه</title>
     <style>
-        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        h1, h2 { color: #2c3e50; }
-        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .last-updated { color: #666; font-style: italic; }
-        .contact { background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        /* Reset and RTL base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 25px 20px;
+            color: #333;
+            background-color: #f9f9f9;
+            text-align: right;
+            direction: rtl;
+        }
+        
+        /* Typography for Persian */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #2980b9;
+            border-right: 4px solid #3498db;
+            padding-right: 15px;
+            margin-top: 35px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        
+        /* Lists */
+        ul {
+            margin-right: 25px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            position: relative;
+            padding-right: 10px;
+        }
+        
+        li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            right: -15px;
+        }
+        
+        /* Special sections */
+        .last-updated {
+            color: #7f8c8d;
+            font-style: italic;
+            text-align: left;
+            direction: ltr;
+            font-size: 0.95rem;
+            background: #f1f8ff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            border-right: 3px solid #3498db;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 2px solid #90caf9;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .contact h2 {
+            border-right: none;
+            color: #1565c0;
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        /* Strong and emphasis */
+        strong {
+            color: #2c3e50;
+            font-weight: 700;
+        }
+        
+        em {
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Horizontal line */
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to left, #3498db, #2c3e50);
+            margin: 40px 0;
+            border-radius: 2px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .contact {
+                padding: 20px;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                max-width: 100%;
+                padding: 0;
+                background: white;
+                font-size: 12pt;
+            }
+            
+            .contact {
+                break-inside: avoid;
+            }
+        }
+        
+        /* Arabic/Persian numeral support */
+        .persian-num {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+        
+        /* Header info */
+        .app-name {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
     <h1>سیاست حفظ حریم خصوصی</h1>
-    <p><strong>اپلیکیشن خدمات دیجیتال جوانه</strong></p>
+    <p class="app-name">اپلیکیشن خدمات دیجیتال جوانه</p>
     
-    <p class="last-updated">آخرین به‌روزرسانی: ۱۴۰۳/۰۲/۱۷</p>
+    <p class="last-updated">آخرین به‌روزرسانی: <span class="persian-num">1404/02/16</span></p>
     
     <p>اپلیکیشن <strong>خدمات دیجیتال جوانه</strong> که توسط <strong>تیم توسعه نرم‌افزار جوانه (Javaneh Technology)</strong> ساخته شده است، متعهد به حفظ حریم خصوصی کاربران خود می‌باشد. این سند نحوه جمع‌آوری، استفاده، ذخیره‌سازی و محافظت از اطلاعات شخصی شما را توضیح می‌دهد.</p>
     
@@ -90,5 +265,16 @@
     
     <hr>
     <p><em>این سند به زبان فارسی تهیه شده و در صورت وجود اختلاف بین ترجمه‌های مختلف، متن فارسی مقدم است.</em></p>
+    
+    <script>
+        // Update the date automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const persianDate = '1404/02/16'; // You can update this date
+            const dateElement = document.querySelector('.last-updated .persian-num');
+            if (dateElement) {
+                dateElement.textContent = persianDate;
+            }
+        });
+    </script>
 </body>
 </html>
